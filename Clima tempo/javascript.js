@@ -3,12 +3,12 @@ document.querySelector('#btn-reset').addEventListener('click', () => {
     input.value = ''
     input.focus()
     
-    clearInfo()
+
 })
 
 document.querySelector('#search').addEventListener('click', async(event) => {
     event.preventDefault();
-    clearInfo()
+
 
     let input = document.querySelector('#searchInput').value
 
@@ -27,12 +27,25 @@ document.querySelector('#search').addEventListener('click', async(event) => {
                 windSpeed: json.wind.speed,
                 windAngle: json.wind.deg
             })} else {
-            clearInfo()
+            // clearInfo()
             console.log('Não encontramos esta localização.');
         }
     } else {
-        clearInfo()
+        // clearInfo()
     }
 
-    clearInfo()
+    // clearInfo()
 })
+
+
+function showInfo(obj) {
+    document.querySelector('.city').innerHTML = `${obj.name}, ${obj.country}.`.toLocaleUpperCase()
+
+    document.querySelector('.celsius').innerHTML = `${obj.temp} <sup>°C</sup>`
+    document.querySelector('.windInfo').innerHTML = `${obj.windSpeed} <sup>km/h</sup>`
+
+    document.querySelector('.weatherImg img').setAttribute('src', 
+        `http://openweathermap.org/img/wn/${obj.tempIcon}@2x.png`)
+    
+    document.querySelector('.windDot').style.transform = `rotate(${obj.windAngle-90}deg)`
+}
