@@ -4,12 +4,9 @@
     box-sizing: border-box;
 }
 
-html,
 body {
     width: 100%;
-}
-
-body {
+    max-width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -17,53 +14,47 @@ body {
     color: #fff;
 }
 
-
 .search-area,
-.weather {
-    width: 300px;
-    max-width: 100%;
-    border: 1px solid #fff;
-    border-radius: 20px;
-    padding: 20px;
-    margin: 20px;
-    text-align: center;
-}
-.search-area {
-    position: relative;
-}
-
-.search-area input {
-    background: none;
+.result {
     width: 90%;
-    height: 40px;
     border: 1px solid #fff;
-    border-radius: 10px;
-    margin: 20px 0px;
-}
-
-.search-area input::placeholder,
-.search-area input{
-    color: #fff;
-    padding-left: 10px;
+    margin: 30px;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
 }
 
 .reset {
     position: absolute;
-    right: 40px;
-    bottom: 87px;
+    right: 75px;
+    top: 102px;
     background: none;
     border: none;
     cursor: pointer;
     font-size: 1rem;
 }
-
+#searchInput,
 .btn {
-    width: 80px;
-    background: none;
-    border: 1px solid #fff;
     color: #fff;
+    border: 1px solid #fff;
+}
+#searchInput {
+    background: none;
+    height: 30px;
     padding: 10px;
     border-radius: 10px;
+    margin-top: 10px;
+}
+
+#searchInput::placeholder{
+    color: #fff;
+}
+
+.btn {
+    margin-top: 10px;
+    padding: 5px 10px; 
+    border-radius: 10px;
+    background: none;
 }
 
 .btn:hover {
@@ -71,48 +62,19 @@ body {
     color: #000;
 }
 
-.weather {
-    text-align: center;
-    display: none;
-}
-.weather-area {
+.weather-area{
+    width: 100%;
     display: flex;
 }
 
 .temp,
-.wind{
-    flex: 1
+.wind {
+    flex: 1;
 }
 
-.sub-title {
-    font-style: italic;
-    font-weight: 100;
-    margin: 10px 0px;
-    color: #bebebe;
-    font-size: 1.1rem;
-}
-
-.celsius,
-.windInfo{
-    font-size: 2rem;
-    font-weight: bolder;
-}
-
-.weather-img {
-    font-size: 5rem;
-}
-
-.figure {
-    font-size: 1rem;
-    margin-top: 10px;
-}
-
-.windDot {
+.windDot{
     width: 15px;
-    height: 1px;
+    height: 15px;
     background-color: #fff;
-    transform-origin: left;
-}
-sup {
-    font-size: 0.9rem;
+    color: red;
 }
