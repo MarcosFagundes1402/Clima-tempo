@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clima tempo</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+        <div class="search-area">
+            <h1>Clima</h1>
+        
+            <div class="searchInput">
+                <input type="text" placeholder="Buscar cidade... " id="searchInput">
+                <button id="btn-reset" class="reset">❌</button>
+            </div>
+        
+            <button id="search" class="btn">Buscar</button>
+        </div>
+
+        <div class="weather">
+            <h1 class="city">--, --</h1>
+            <div class="weather-area">
+                <div class="temp">
+                    <div class="sub-title">Temperatura</div>
+                
+                    <div class="celsius">-- <sup>°C</sup></div>
+                    <div class="weather-img">
+                        🌤️
+                    </div>
+                </div>
+                <div class="wind">
+                    <div class="sub-title">Vento</div>
+                    <div class="windInfo">-- <span>km/h</span></div>
+                    <div class="windArea">
+                        <div class="windDot" style="transform: rotate(0deg)"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="aviso"></div>
+
+        <fonter>Criado por Marcos Fagundes, inspiração projeto B7WEB </font>
+    <script src="./javascript.js"></script>
+</body>
+</html>
