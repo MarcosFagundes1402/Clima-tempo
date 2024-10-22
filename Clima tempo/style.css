@@ -73,7 +73,7 @@ body {
 
 .weather {
     text-align: center;
-
+    display: none;
 }
 .weather-area {
     display: flex;
@@ -92,11 +92,27 @@ body {
     font-size: 1.1rem;
 }
 
-.celsius{
+.celsius,
+.windInfo{
     font-size: 2rem;
     font-weight: bolder;
 }
 
 .weather-img {
     font-size: 5rem;
+}
+
+.figure {
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.windDot {
+    width: 15px;
+    height: 1px;
+    background-color: #fff;
+    transform-origin: left;
+}
+sup {
+    font-size: 0.9rem;
 }
